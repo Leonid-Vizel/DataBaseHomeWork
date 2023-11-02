@@ -55,5 +55,18 @@ CREATE TABLE "Norms" (
 CREATE INDEX "IX_Norms_OperationId" ON "Norms" ("OperationId");
 CREATE INDEX "IX_Norms_ProfessionId" ON "Norms" ("ProfessionId");
 CREATE INDEX "IX_Norms_TarifId" ON "Norms" ("TarifId");
+CREATE INDEX "IX_Norms_PartId" ON "Norms" ("PartId");
 CREATE INDEX "IX_Operations_MaterialId" ON "Operations" ("MaterialId");
 CREATE INDEX "IX_Operations_PartId" ON "Operations" ("PartId");
+
+
+CREATE PROCEDURE Init()
+LANGUAGE SQL
+AS $$
+INSERT INTO "Materials"("Name", "Measurement", "PlanPrice") VALUES('Тестовый материал 1','кг',11.0);
+INSERT INTO "Materials"("Name", "Measurement", "PlanPrice") VALUES('Тестовый материал 2','кг',12.0);
+INSERT INTO "Materials"("Name", "Measurement", "PlanPrice") VALUES('Тестовый материал 3','кг',13.0);
+INSERT INTO "Materials"("Name", "Measurement", "PlanPrice") VALUES('Тестовый материал 4','кг',14.0);
+INSERT INTO "Materials"("Name", "Measurement", "PlanPrice") VALUES('Тестовый материал 5','кг',15.0);
+INSERT INTO "Materials"("Name", "Measurement", "PlanPrice") VALUES('Тестовый материал 6','кг',16.0);
+$$;
