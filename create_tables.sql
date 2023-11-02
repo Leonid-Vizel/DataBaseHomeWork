@@ -45,7 +45,7 @@ CREATE TABLE "Norms" (
     "Qualification" character varying(2000) NOT NULL,
     "FinalMinuteTime" integer NOT NULL,
     "PieceMinuteTime" integer NOT NULL,
-    CONSTRAINT "PK_Norms" PRIMARY KEY ("PartId", "OperationId"),
+    CONSTRAINT "PK_Norms" PRIMARY KEY ("PartId", "OperationId", "ProfessionId", "TarifId"),
     CONSTRAINT "FK_Norms_Operations_OperationId" FOREIGN KEY ("OperationId") REFERENCES "Operations" ("Id") ON DELETE CASCADE,
     CONSTRAINT "FK_Norms_Parts_PartId" FOREIGN KEY ("PartId") REFERENCES "Parts" ("Id") ON DELETE CASCADE,
     CONSTRAINT "FK_Norms_Professions_ProfessionId" FOREIGN KEY ("ProfessionId") REFERENCES "Professions" ("Id") ON DELETE CASCADE,
