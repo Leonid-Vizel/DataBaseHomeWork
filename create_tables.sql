@@ -37,7 +37,6 @@ CREATE TABLE "Operations" (
     CONSTRAINT "FK_Operations_Parts_PartId" FOREIGN KEY ("PartId") REFERENCES "Parts" ("Id") ON DELETE CASCADE
 );
 
-
 CREATE TABLE "Norms" (
     "PartId" integer NOT NULL,
     "OperationId" integer NOT NULL,
