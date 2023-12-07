@@ -86,4 +86,30 @@ INSERT INTO "Materials"("Name", "Measurement", "PlanPrice") VALUES('Тестов
 INSERT INTO "Materials"("Name", "Measurement", "PlanPrice") VALUES('Тестовый материал 4','кг',14.0);
 INSERT INTO "Materials"("Name", "Measurement", "PlanPrice") VALUES('Тестовый материал 5','кг',15.0);
 INSERT INTO "Materials"("Name", "Measurement", "PlanPrice") VALUES('Тестовый материал 6','кг',16.0);
+
+INSERT INTO "Professions"("Name") VALUES('Тестовый кадр 1');
+INSERT INTO "Professions"("Name") VALUES('Тестовый кадр 2');
+INSERT INTO "Professions"("Name") VALUES('Тестовый кадр 3');
+INSERT INTO "Professions"("Name") VALUES('Тестовый кадр 4');
+INSERT INTO "Professions"("Name") VALUES('Тестовый кадр 5');
+INSERT INTO "Professions"("Name") VALUES('Тестовый кадр 6');
+
+INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 1', 100);
+INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 2', 101);
+INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 3', 102);
+INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 4', 103);
+INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 5', 104);
+INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 6', 105);
+
+INSERT INTO "Parts"("Name", "DetailType", "Measurement", "PlanPrice") VALUES('Тестовая деталь 1', 0, "кг", 12.7);
+INSERT INTO "Parts"("Name", "DetailType", "Measurement", "PlanPrice") VALUES('Тестовая деталь 2', 1, "кг", 100.9);
+INSERT INTO "Parts"("Name", "DetailType", "Measurement", "PlanPrice") VALUES('Тестовая деталь 3', 0, "кг", 17564);
+INSERT INTO "Parts"("Name", "DetailType", "Measurement", "PlanPrice") VALUES('Тестовая деталь 4', 1, "кг", 987.2);
+INSERT INTO "Parts"("Name", "DetailType", "Measurement", "PlanPrice") VALUES('Тестовая деталь 5', 0, "кг", 50.2);
+
+INSERT INTO "Operations"("PartId", "MaterialId", "NeededAmount") VALUES(1, 1, 1);
+INSERT INTO "Operations"("PartId", "MaterialId", "NeededAmount") VALUES(1, 2, 2);
+INSERT INTO "Operations"("PartId", "MaterialId", "NeededAmount") VALUES(2, 3, 3);
+INSERT INTO "Operations"("PartId", "MaterialId", "NeededAmount") VALUES(2, 4, 4);
+INSERT INTO "Operations"("PartId", "MaterialId", "NeededAmount") VALUES(3, 5, 5);
 $$;
