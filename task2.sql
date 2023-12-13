@@ -12,7 +12,7 @@
 
 SELECT p."Id",
 ROUND(SUM(n."FinalMinuteTime" / 60.0 * t."PerHour"), 1) as "FinalWorkPrice",
-ROUND(SUM(m."PlanPrice" * o."NeededAmount"::numeric), 1) as "MaterialPrice"
+ROUND(SUM(m."PlanPrice" * o."NeededAmount"), 1) as "MaterialPrice"
 FROM "Parts" AS p
 INNER JOIN "Norms" AS n ON n."PartId" = p."Id"
 INNER JOIN "Tarifs" AS t ON n."TarifId" = t."Id"
