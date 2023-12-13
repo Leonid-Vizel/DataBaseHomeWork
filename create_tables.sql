@@ -9,6 +9,7 @@ CREATE TABLE "Materials" (
     "Measurement" character varying(100) NOT NULL,
     "PlanPrice" numeric NOT NULL,
     CONSTRAINT "PK_Materials" PRIMARY KEY ("Id")
+    CHECK ("PlanPrice" > 0)
 );
 
 -- По аналогии с первой таблицей строим таблицы соблюдая конвенции и стараясь максимально угодить пользователю
