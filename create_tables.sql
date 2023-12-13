@@ -8,8 +8,8 @@ CREATE TABLE "Materials" (
     "Name" character varying(1000) NOT NULL,
     "Measurement" character varying(100) NOT NULL,
     "PlanPrice" numeric NOT NULL,
+    CHECK ("PlanPrice" > 0),
     CONSTRAINT "PK_Materials" PRIMARY KEY ("Id")
-    CHECK ("PlanPrice" > 0)
 );
 
 -- По аналогии с первой таблицей строим таблицы соблюдая конвенции и стараясь максимально угодить пользователю
@@ -122,12 +122,12 @@ INSERT INTO "Professions"("Name") VALUES('Тестовый кадр 4');
 INSERT INTO "Professions"("Name") VALUES('Тестовый кадр 5');
 INSERT INTO "Professions"("Name") VALUES('Тестовый кадр 6');
 
-INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 1', 100);
-INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 2', 101);
-INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 3', 102);
-INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 4', 103);
-INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 5', 104);
-INSERT INTO "Tarifs"("Name", "PerHour") VALUES('Тестовый тариф 6', 105);
+INSERT INTO "Tarifs"("PerHour") VALUES(100);
+INSERT INTO "Tarifs"("PerHour") VALUES(101);
+INSERT INTO "Tarifs"("PerHour") VALUES(102);
+INSERT INTO "Tarifs"("PerHour") VALUES(103);
+INSERT INTO "Tarifs"("PerHour") VALUES(104);
+INSERT INTO "Tarifs"("PerHour") VALUES(105);
 
 INSERT INTO "Parts"("Name", "DetailType", "Measurement", "PlanPrice") VALUES('Тестовая деталь 1', 0, "кг", 12.7);
 INSERT INTO "Parts"("Name", "DetailType", "Measurement", "PlanPrice") VALUES('Тестовая деталь 2', 1, "кг", 100.9);
