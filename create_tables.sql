@@ -147,3 +147,14 @@ INSERT INTO "Norms"("PartId", "OperationId", "ProfessionId", "TarifId", "Qualifi
 INSERT INTO "Norms"("PartId", "OperationId", "ProfessionId", "TarifId", "Qualification", "FinalMinuteTime", "PieceMinuteTime") VALUES(2, 4, 4, 4, 'Тестовая квалификация 4', 4, 4);
 INSERT INTO "Norms"("PartId", "OperationId", "ProfessionId", "TarifId", "Qualification", "FinalMinuteTime", "PieceMinuteTime") VALUES(3, 5, 5, 5, 'Тестовая квалификация 5', 5, 5);
 $$;
+
+-- Создаём простенькую функцию с возвращаемыми значениями. 
+
+CREATE OR REPLACE FUNCTION return_setof_int() RETURNS SETOF int AS
+$$
+BEGIN
+  RETURN NEXT 1;
+  RETURN NEXT 2;
+  RETURN NEXT 3;
+END
+$$ LANGUAGE plpgsql;
